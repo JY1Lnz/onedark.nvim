@@ -88,39 +88,43 @@ theme.setup = function(cfg)
     -- default,
     -- Uncomment and edit if you want more specific syntax highlighting.
 
-    Constant = { fg = c.orange1 }, -- (preferred) any constant
-    String = { fg = c.green0 }, --   a string constant: "this is a string"
-    Character = { fg = c.green0 }, --  a character constant: 'c', '\n'
+    Constant = { fg = c.orange1 , }, -- (preferred) any constant
+    String = { fg = c.m_red0 }, --   a string constant: "this is a string"
+    Character = { fg = c.m_red0 }, --  a character constant: 'c', '\n'
     -- Number        = { }, --   a number constant: 234, 0xff
     Boolean = { fg = c.orange1 }, --  a boolean constant: TRUE, false
     -- Float         = { }, --    a floating point constant: 2.3e10
 
-    Identifier = { fg = c.red1, style = cfg.variable_style }, -- (preferred) any variable name
-    Function = { fg = c.blue0, style = cfg.function_style }, -- function name (also: methods for classes)
-    Method = { link = 'Function' }, -- method name
+    Identifier = { fg = c.m_white0, style = cfg.variable_style }, -- (preferred) any variable name
+    Parameter = { fg = c.m_yellow1},
+    Property = { fg = c.m_yellow1, style = 'italic' },
+    Function = { fg = c.m_orange0, style = cfg.function_style }, -- function name (also: methods for classes)
+    Method = { fg = c.m_orange0, style = "italic"}, -- method name
     Statement = { fg = c.purple0 }, -- (preferred) any statement
     -- Conditional   = { }, --  if, then, else, endif, switch, etc.
     -- Repeat        = { }, --   for, do, while, etc.
     -- Label         = { }, --    case, default, etc.
-    Operator = { fg = c.red1 }, -- "sizeof", "+", "*", etc.
-    Keyword = { fg = c.cyan0, style = cfg.keyword_style }, --  any other keyword
+    Operator = { fg = c.m_purple1 }, -- "sizeof", "+", "*", etc.
+    -- Keyword = { fg = c.cyan0, style = cfg.keyword_style }, --  any other keyword
+    Keyword = { fg = c.m_purple1, style = cfg.keyword_style }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
     PreProc = { fg = c.cyan0 }, -- (preferred) generic Preprocessor
-    -- Include       = { }, --  preprocessor #include
-    -- Define        = { }, --   preprocessor #define
-    -- Macro         = { }, --    same as Define
+    Include       = { fg = c.m_purple1 }, --  preprocessor #include
+    Define        = { fg = c.m_purple0 }, --   preprocessor #define
+    Macro        = { fg = c.m_purple0, style = "bold" }, --   preprocessor #define
     -- PreCondit     = { }, --  preprocessor #if, #else, #endif, etc.
-
-    Type = { fg = c.yellow1 }, -- (preferred) int, long, char, etc.
+    --
+    Type = { fg = c.m_yellow0 }, -- (preferred) int, long, char, etc.
     -- StorageClass  = { }, -- static, register, volatile, etc.
-    -- Structure     = { }, --  struct, union, enum, etc.
+    Structure     = { fg = c.m_yellow0, style = Styles.Bold }, --  struct, union, enum, etc.
+    Namespace     = { fg = c.m_yellow0, style = "bold,underline" },
     -- Typedef       = { }, --  A typedef
 
     Special = { fg = c.red1 }, -- (preferred) any special symbol
     -- SpecialChar   = { }, --  special character in a constant
     -- Tag           = { }, --    you can use CTRL-] on this
-    -- Delimiter     = { }, --  character that needs attention
+    Delimiter     = { fg = c.m_yellow1 }, --  character that needs attention
     -- SpecialComment= { }, -- special things inside a comment
     -- Debug         = { }, --    debugging statements
 
@@ -212,7 +216,7 @@ theme.setup = function(cfg)
     TSDanger = { fg = c.bg0, bg = c.error },
     TSConstructor = { fg = c.red1 }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
     -- TSConditional       = { };    -- For keywords related to conditionnals.
-    TSConstant = { fg = c.yellow1 }, -- For constants
+    TSConstant = { fg = '#FF0000' }, -- For constants
     -- TSConstBuiltin      = { };    -- For constant that are built in the language: `nil` in Lua.
     -- TSConstMacro        = { };    -- For constants that are defined by macros: `NULL` in C.
     -- TSError             = { };    -- For syntax/parser errors.

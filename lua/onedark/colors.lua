@@ -10,14 +10,17 @@ colors.setup = function(cfg)
   ---@type od.ColorPalette
   local c = {
     none = 'NONE',
-    bg0 = '#282c34',
-    bg1 = '#21252b',
-    bg_highlight = '#2c313a',
+    -- bg0 = '#282c34',
+    bg0 = '#1E1E1E',
+    -- bg1 = '#21252b',
+    bg1 = '#1E1E1E',
+    bg_highlight = '#000000',
     bg_visual = '#393f4a',
     black0 = '#20232A',
     blue0 = '#61afef',
     blue1 = '#528bff',
     cyan0 = '#56b6c2',
+    -- cyan0 = '#ff0000',
     fg0 = '#abb2bf',
     fg_dark = '#798294',
     fg_gutter = '#5c6370',
@@ -41,6 +44,15 @@ colors.setup = function(cfg)
       pink = '#f55385',
       gray = '#4d5a5e',
     },
+    m_yellow0 = '#FFD700',
+    m_yellow1 = '#BDB76B',
+    m_orange0 = '#FF8000',
+    m_white0 = '#BFBFB4',
+    m_purple0 = '#8F5DAF',
+    m_purple1 = '#D8A0DF',
+    m_blue0 = '#00E2C8',
+    m_green0 = '#57A64A',
+    m_red0 = '#D69D85',
   }
 
   -- useful for 'util.darken()' and 'util.lighten()'
